@@ -96,8 +96,8 @@ class LineBotController < ApplicationController
       type: 'image',
       url: hotel['hotelImageUrl'],
       size: 'full',
-      aspecRatio: '20:13',
-      aspecMode: 'cover',
+      aspectRatio: '20:13',
+      aspectMode: 'cover',
       action: {
         type: 'uri',
         url: hotel['hotelInformationUrl']
@@ -131,7 +131,7 @@ class LineBotController < ApplicationController
                 {
                   type: 'text',
                   text: '住所',
-                  color: "#aaaaaa",
+                  color: '#aaaaaa',
                   size: 'sm',
                   flex: 1
                 },
@@ -139,7 +139,7 @@ class LineBotController < ApplicationController
                   type: 'text',
                   text: hotel['address1'] + hotel['address2'],
                   wrap: true,
-                  color: "#666666",
+                  color: '#666666',
                   size: 'sm',
                   flex: 5
                 }
@@ -153,15 +153,15 @@ class LineBotController < ApplicationController
                 {
                   type: 'text',
                   text: '料金',
-                  color: "#aaaaaa",
+                  color: '#aaaaaa',
                   size: 'sm',
                   flex: 1
                 },
                 {
                   type: 'text',
-                  text: "￥" + hotel['hotelMinCharge'].to_s + '〜',
+                  text: '￥' + hotel['hotelMinCharge'].to_s + '〜',
                   wrap: true,
-                  color: "#666666",
+                  color: '#666666',
                   size: 'sm',
                   flex: 5
                 }
@@ -186,7 +186,7 @@ class LineBotController < ApplicationController
           action: {
             type: 'uri',
             label: '電話する',
-            uri: "tel:" + hotel['telephoneNo']
+            uri: 'tel:' + hotel['telephoneNo']
           }
         },
         {
@@ -196,7 +196,7 @@ class LineBotController < ApplicationController
           action: {
             type: 'uri',
             label: '地図を見る',
-            uri: "https://www.google.com/maps?q=" + hotel['latitude'].to_s + hotel['longitude'].to_s
+            uri: 'https://www.google.com/maps?q=' + hotel['latitude'].to_s + hotel['longitude'].to_s
           }
         },
         {
