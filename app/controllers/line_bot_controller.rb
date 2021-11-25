@@ -100,7 +100,7 @@ class LineBotController < ApplicationController
       aspectMode: 'cover',
       action: {
         type: 'uri',
-        url: hotel['hotelInformationUrl']
+        uri: hotel['hotelInformationUrl']
       }
     }
   end
