@@ -21,8 +21,6 @@ class LineBotController < ApplicationController
           message = search_and_create_message(event.message['text'])
           # 応答トークンを元にリプライを送信
           client.reply_message(event['replyToken'], message)
-          p "+++++++++++++"
-          p message
         end
       end
     end
